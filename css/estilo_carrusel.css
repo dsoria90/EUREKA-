@@ -1,0 +1,219 @@
+/* ----------PRINCIPAL--------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*----------BODY------------------ */
+body {
+    font-family: "cinzel";
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* altura */
+}
+
+/*------BARRA NAV---------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #C0CEDD;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .logo a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centra los enlaces en escritorio */
+    width: 90%;
+    margin-top: 30px;
+    gap: 100px;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/*------ESTILO MENU BURGER--------- */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    width: 25px;
+}
+
+.menu-toggle .bar {
+    height: 4px;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+}
+
+/* -------------MAIN------------*/
+.contenido-main {
+    margin-top: 80px; /* Para evitar que el contenido quede cubierto por la barra */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px); /* Resta la altura de la barra */
+    text-align: center;
+    flex-direction: column;
+}
+
+/*----CARRUSEL-----*/
+
+.carousel {
+    max-width: 80%; /* Ajusta el ancho del carrusel */
+    margin: 20px auto; /* Centra el carrusel horizontalmente */
+    margin-top: -774px;
+}
+
+.carousel-item img {
+    width: 100%; /* La imagen ocupa todo el ancho del carrusel */
+    height: 700px;
+    object-fit: cover; /* Mantiene la imagen adaptada al espacio */
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para el texto */
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.carousel-caption h5 {
+    font-family: 'Cinzel';
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.carousel-caption p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.carousel button:hover {
+    background-color: transparent;
+}
+
+
+/* -----PROPIEDADES DEL FOOTER--------- */
+footer {
+    font-family: 'Cinzel';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #C0CEDD;
+    color: #000000;
+    padding: 1rem;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.logoUade img {
+    max-height: 50px;
+}
+
+
+
+/* ---------MQ RESPONSIVE PARA MENU NAV - LINKS LOGO - M HAMBURG. - INDEX IM Y CONTACTO---------- */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #C0CEDD;
+        position: absolute;
+        top: 120px;
+        left: 0;
+        padding: 80px;
+        justify-content: center; /* Centra los enlaces en pantallas pequeñas */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        margin-top: -50px;
+        text-align: center; /* CENTRA LOS ENLACES */
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .navbar .logo {
+        text-align: center; /* CENTRA EL LOGO */
+        margin-bottom: 20px;
+    }
+
+    .contenido-main {
+        margin-top: 200px;
+        margin-bottom: 50px;
+    }
+
+    #temaCarousel {
+        margin-top: -650px;
+    }
+}
+
+/* ---- MQ RESPONSIVE --RESERVAS---- */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.2em;
+        text-align: left;
+        text-decoration: #000000;
+    }
+    
+    .section2 {
+        margin-left: 1px;
+        width: 100%;
+    }
+
+    .section {
+        margin-left: 110px;
+        margin: 204px 1px 1100px;
+        width: 100%;
+    }
+}
